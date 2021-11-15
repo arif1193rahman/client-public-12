@@ -1,0 +1,9 @@
+.total-card{
+    margin: 5px;
+    text-align: center;
+}
+.customer-head span{
+    color: rgb(145, 182, 149);
+    font-weight: 700;
+    font-size: xx-large;
+}
