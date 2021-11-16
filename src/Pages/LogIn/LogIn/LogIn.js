@@ -27,9 +27,9 @@ const LogIn = () => {
     e.preventDefault();
   };
 
-  const handleGoogleSignIn=(location, history)=>{
-    signInWithGoogle(location, history);
-  }
+//   const handleGoogleSignIn=(location, history)=>{
+//     signInWithGoogle(location, history);
+//   }
   return (
     <Container>
       <Grid container spacing={2}>
@@ -78,7 +78,7 @@ const LogIn = () => {
             {authError && <Alert severity="error">{authError}</Alert>}
           </form>
           <p>----------------------</p>
-          <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button>
+          {/* <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button> */}
 
         </Grid>
         <Grid item xs={12} md={6}>

@@ -89,7 +89,7 @@ const Register = () => {
           {isLoading && <CircularProgress />}
           {user?.email && 
             <Alert severity="success">
-              This is a success alert — check it out!
+              You are Added!
             </Alert>
           }
           {authError && <Alert severity="error">{authError}</Alert>
