@@ -19,7 +19,7 @@ const OurServices = () => {
             <h2 className="customer-head">This is our <span>service</span></h2>
             <div className="row m-4">
                     {
-                        services.map(service=> <Services
+                        services?.map(service=> <Services
                             service={service}
                             key={service.id}
                         ></Services>)
