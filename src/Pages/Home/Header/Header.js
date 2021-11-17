@@ -11,7 +11,7 @@ const Header = () => {
         <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg">
         <Container>
           <Navbar.Brand to="/home" className="main-text">
-            SECURE-PROPERTY 
+            S-PROPERTY 
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end nav-text">
@@ -23,6 +23,9 @@ const Header = () => {
             </Nav.Link>
             <Nav.Link as={HashLink} to="/about#about">
               About
+            </Nav.Link>
+            <Nav.Link as={HashLink} to="/explore">
+              Explore
             </Nav.Link>
             {/* {user?.email && (
               <Nav.Link as={HashLink} to="/myOrders">

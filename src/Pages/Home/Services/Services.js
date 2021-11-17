@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import './Services.css';
 
 const Services = ({service}) => {
-  const { name, details, _id, img, price } = service;
+  const { brand, overview, _id, img, price } = service;
 console.log(service);
   return (
     <div className="col-lg-6 image">
-      <h3 className="service-name">{name}</h3>
-      <p>{details}</p>
+      <h3 className="service-name">{brand}</h3>
+      <p>{overview}</p>
       <p>Price: ${price}</p>
       <img src={img} alt="" />
       <Link to={`/services/${_id}`}>

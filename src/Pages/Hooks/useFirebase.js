@@ -38,9 +38,11 @@ const useFirebase = ()=>{
 const loginUser = (email, password, location, history)=>{
   setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
+  .then((result) => {
     const destination = location?.state?.from || '/';
     history.replace(destination);
+    // collect email for order
+    sessionStorage.setItem('email', result.user.email);
     setAuthError('');
     // setUser({});
     // const user = userCredential.user;

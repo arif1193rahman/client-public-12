@@ -5,10 +5,10 @@ import { useForm } from "react-hook-form";
 import "./Booking.css";
 
 const Booking = () => {
-  const { user } = useAuth();
+  const { user,} = useAuth();
   const { bookingId } = useParams();
   const [product, setProduct] = useState([]);
-
+// const email = sessionStorage.getItem('email')
   // console.log(bookingId);
 
   const {
@@ -19,6 +19,7 @@ const Booking = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    //  data.email = email;
     fetch(`https://polar-oasis-62677.herokuapp.com/services`, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -28,7 +29,7 @@ const Booking = () => {
       .then((result) => {
         console.log("submit", result);
         if (result.insertedId) {
-          alert("Yehhh , You are added");
+          alert("Yehhh , Your Order Is confirm");
           reset();
         }
       });
@@ -42,7 +43,7 @@ const Booking = () => {
   //   console.log(product);
   // console.log(product.name);
   return (
-    <div>
+    <div className="row m-5">
       <div className="col-lg-6 col-sm-12">
         <h2>Confirm Your Order...</h2>
         <h1>To</h1>
@@ -57,7 +58,7 @@ const Booking = () => {
           <input
             className="p-2 m-2"
              placeholder="Name"
-            defaultValue={user?.displayName}
+            defaultValue={user.name}
             {...register("Name")}
           />
           <input

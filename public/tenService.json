@@ -1,0 +1,60 @@
+[
+    {
+    "id": 5345634,
+    "img": " https://i.ibb.co/GdFfC1v/20-209270-c-mount-camera-c-mount-cctv-camera.jpg",
+    "brand": "Dome",
+    "overview": "A dome CCTV camera gets its name from the dome-shaped casing that the camera sits in. Whilst these are relatively discreet CCTV cameras in appearance, this doesn’t stop them from deterring criminals.",
+    "range": "30 FIT",
+     "price": 10000
+    },
+    {
+    "id": 754972,
+    "img": "https://i.ibb.co/vDMJfpT/280408591606536539-4645.jpg",
+    "brand": "Bullet",
+    "overview": " Bullet CCTV cameras have an iconic design that is highly visible. They are cylindrical in shape and are capable of observing long distances.",
+    "range": "30 FIT",
+     "price": 10000
+    },
+    {
+    "id": 9847213,
+    "img": "https://i.ibb.co/vD5Xcts/Day-night-cctv-camera.jpg",
+    "brand": "C-Mount",
+    "overview": "C-Mount CCTV cameras are the ideal option for those who may wish to adapt the field of vision. They are equipped",
+    "range": "30 FIT",
+     "price": 1000
+    },
+    {
+    "id": 76523465,
+    "img": " https://i.ibb.co/9spdb27/facebook-arlo-camera-review.jpg",
+    "brand": "PTZ Pan Tilt",
+    "overview": "With a PTZ (Pan Tilt & Zoom) camera, your security team can have complete control on what is recorded. ",
+    "range": "50 FIT",
+     "price": 54000
+    },
+    {
+    "id": 237863,
+    "img": "https://i.ibb.co/HqZkhbg/dome-cctv-camera-installation-services-500x500.jpg",
+    "brand": "Day/Night",
+    "overview": "These cameras have been built specifically to operate effectively, regardless of how well lit their environment is.",
+    "range": "50 FIT",
+     "price": 10000
+    },
+    {
+    "id": 12354312,
+    "img": "https://i.ibb.co/R4c4nZC/Swann-Bullet-Cam-696x464.jpg",
+    "brand": "Infrared/Night Vision ",
+    "overview": "As the name suggests, these cameras are designed to operate optimally in pitch black conditions.",
+    "range": "80 FIT",
+     "price": 16000
+    }
+    ]
+
+//     https://i.ibb.co/GdFfC1v/20-209270-c-mount-camera-c-mount-cctv-camera.jpg
+// https://i.ibb.co/vDMJfpT/280408591606536539-4645.jpg
+// https://i.ibb.co/vD5Xcts/Day-night-cctv-camera.jpg
+// https://i.ibb.co/HqZkhbg/dome-cctv-camera-installation-services-500x500.jpg
+// https://i.ibb.co/9spdb27/facebook-arlo-camera-review.jpg
+// https://i.ibb.co/Pwf9G6z/images-1.jpg
+// https://i.ibb.co/R4c4nZC/Swann-Bullet-Cam-696x464.jpg
+// https://i.ibb.co/xStBw8N/Surveillance-camera-against-blue-sky.jpg
+// https://i.ibb.co/jTXb9Sg/wireless-Camera1-400x250.jpg
