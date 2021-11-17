@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
     faPhoneVolume,
-    faMapMarkedAlt,
+    // faMapMarkedAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {

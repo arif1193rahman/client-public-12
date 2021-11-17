@@ -27,7 +27,7 @@ const useFirebase = ()=>{
                 // ...
               });
               history.replace('/');
-                const user = userCredential.user;
+                // const user = userCredential.user;
               })
               .catch((error) => {
                 setAuthError(error.message);
@@ -43,7 +43,7 @@ const loginUser = (email, password, location, history)=>{
     history.replace(destination);
     setAuthError('');
     // setUser({});
-    const user = userCredential.user;
+    // const user = userCredential.user;
     // ...
   })
   .catch((error) => {
@@ -66,7 +66,7 @@ const loginUser = (email, password, location, history)=>{
                 setIsLoading(false)
               })
               return ()=> unsubscribe;
-        },[])
+        },[auth])
 
 
 const logOut = ()=>{

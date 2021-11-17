@@ -19,7 +19,7 @@ const Booking = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch(`http://localhost:5000/services`, {
+    fetch(`https://polar-oasis-62677.herokuapp.com/services`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -35,7 +35,7 @@ const Booking = () => {
   };
 
   useEffect(() => {
-      fetch(`http://localhost:5000/services/${bookingId}`)
+      fetch(`https://polar-oasis-62677.herokuapp.com/services/${bookingId}`)
       .then(res=>res.json())
       .then(data=>setProduct(data))
     },[bookingId]);
