@@ -1,27 +1,105 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import './Booking.css';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
+import { useForm } from "react-hook-form";
+import "./Booking.css";
 
 const Booking = () => {
-    const {bookingId} = useParams();
-    const [product, setProduct] = useState([])
+  const { user } = useAuth();
+  const { bookingId } = useParams();
+  const [product, setProduct] = useState([]);
 
-    // console.log(bookingId);
+  // console.log(bookingId);
 
-    useEffect(() => {
-        fetch(`/sixService.json/${bookingId}`)
-        .then(res=>res.json())
-        .then(data=>console.log(data))
-      },[]);
-    //   console.log(product);
-    console.log(product.name);
-    return (
-        <div>
-            Booked : {product.name}
-            {bookingId}
-        </div>
-        
-    );
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    fetch(`http://localhost:5000/services`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("submit", result);
+        if (result.insertedId) {
+          alert("Yehhh , You are added");
+          reset();
+        }
+      });
+  };
+
+  useEffect(() => {
+      fetch(`http://localhost:5000/services/${bookingId}`)
+      .then(res=>res.json())
+      .then(data=>setProduct(data))
+    },[bookingId]);
+  //   console.log(product);
+  // console.log(product.name);
+  return (
+    <div>
+      <div className="col-lg-6 col-sm-12">
+        <h2>Confirm Your Order...</h2>
+        <h1>To</h1>
+        <p className="booking-section">
+          <u>{product?.name}</u>
+        </p>
+        <p>{product?.details}</p>
+      </div>
+
+      <div className="col-lg-6 col-sm-12">
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            className="p-2 m-2"
+             placeholder="Name"
+            defaultValue={user?.displayName}
+            {...register("Name")}
+          />
+          <input
+            className="p-2 m-2"
+             placeholder="Name"
+            defaultValue={user?.email}
+            {...register("email")}
+          />
+          <input
+            type="text"
+            className="p-2 m-2"
+             defaultValue={product.name}
+            placeholder="+880"
+            {...register("name")}
+          />
+          <input
+            type="number"
+            className="p-2 m-2"
+             defaultValue={product.price}
+            {...register("price")}
+          />
+
+          <br />
+
+          <input
+            type="text"
+            className="p-2 m-2"
+            placeholder="Your City"
+            {...register("city", { required: true })}
+          />
+          <br />
+
+          {errors.exampleRequired && <span>This field is required</span>}
+
+          <input
+            className="w-50 mx-auto px-3 py3 bg-secondary fw-bold fs-5  text-white btn "
+            type="submit"
+          />
+        </form>
+      </div>
+    </div>
+  );
 };
 
 export default Booking;

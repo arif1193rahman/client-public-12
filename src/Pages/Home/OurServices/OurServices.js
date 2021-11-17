@@ -10,7 +10,7 @@ const OurServices = () => {
    
 
         useEffect(()=>{
-            fetch('/sixService.json')
+            fetch('http://localhost:5000/services')
             .then(res=>res.json())
             .then(data=> setServices(data))
         },[])
@@ -21,7 +21,7 @@ const OurServices = () => {
                     {
                         services?.map(service=> <Services
                             service={service}
-                            key={service.id}
+                            key={service._id}
                         ></Services>)
                     }
             </div>

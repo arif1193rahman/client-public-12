@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Services.css';
 
 const Services = ({service}) => {
-  const { name, details, id, img, price } = service;
+  const { name, details, _id, img, price } = service;
 console.log(service);
   return (
     <div className="col-lg-6 image">
@@ -11,7 +11,7 @@ console.log(service);
       <p>{details}</p>
       <p>Price: ${price}</p>
       <img src={img} alt="" />
-      <Link to={`/booking/${id}`}>
+      <Link to={`/services/${_id}`}>
         <button className="btn btn-warning mt-3">Buy</button>
       </Link>
     </div>
