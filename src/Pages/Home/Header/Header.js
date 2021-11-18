@@ -27,21 +27,22 @@ const Header = () => {
             <Nav.Link as={HashLink} to="/explore">
               Explore
             </Nav.Link>
-            {/* {user?.email && (
-              <Nav.Link as={HashLink} to="/myOrders">
-                My Orders
+           
+            {user?.email && (
+              <Nav.Link as={HashLink} to="/pay">
+               Payment 
               </Nav.Link>
-            )} */}
-            {/* {user?.email && (
-              <Nav.Link as={HashLink} to="/manageOrder">
-               Manage All Orders
+            )}
+            {user?.email && (
+              <Nav.Link as={HashLink} to="/myOrder">
+                My Order
               </Nav.Link>
-            )} */}
-            {/* {user?.email && (
-              <Nav.Link as={HashLink} to="/addNewService">
-                Add New Service
+            )}
+            {user?.email && (
+              <Nav.Link as={HashLink} to="/review">
+                Review
               </Nav.Link>
-            )} */}
+            )}
             <Navbar.Collapse className="justify-content-end">
             {user?.email ? (
                 <Button onClick={logOut}>

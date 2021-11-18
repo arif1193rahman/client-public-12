@@ -20,7 +20,7 @@ const LogIn = () => {
     const newLoginData = { ...logInData };
     newLoginData[field] = value;
     setLogInData(newLoginData);
-    console.log(value, field);
+    // console.log(value, field);
   };
   const handleLogInSubmit = (e) => {
  loginUser(logInData.email, logInData.password, location, history); 

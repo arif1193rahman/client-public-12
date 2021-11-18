@@ -6,6 +6,7 @@ import "./Booking.css";
 
 const Booking = () => {
   const { user,} = useAuth();
+  console.log(user, 'user information');
   const { bookingId } = useParams();
   const [product, setProduct] = useState([]);
 // const email = sessionStorage.getItem('email')
@@ -48,17 +49,17 @@ const Booking = () => {
         <h2>Confirm Your Order...</h2>
         <h1>To</h1>
         <p className="booking-section">
-          <u>{product?.name}</u>
+          <u>{product?.brand}</u>
         </p>
-        <p>{product?.details}</p>
+        <p>{product?.overview}</p>
       </div>
 
       <div className="col-lg-6 col-sm-12">
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             className="p-2 m-2"
-             placeholder="Name"
-            defaultValue={user.name}
+            //  placeholder="Name"
+            defaultValue={user?.displayName}
             {...register("Name")}
           />
           <input
@@ -70,7 +71,7 @@ const Booking = () => {
           <input
             type="text"
             className="p-2 m-2"
-             defaultValue={product.name}
+             defaultValue={product.brand}
             placeholder="+880"
             {...register("name")}
           />

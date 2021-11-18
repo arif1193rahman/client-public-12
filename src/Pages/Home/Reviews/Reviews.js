@@ -6,6 +6,8 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import './Reviews.css';
 
 const Reviews = () => {
@@ -22,7 +24,7 @@ const Reviews = () => {
           <CardMedia
             component="img"
             height="240"
-            image="https://i.ibb.co/pzXH6VB/man-formal-suit-man-formal-suit-white-background-107682590-1.jpg"
+            image="https://i.ibb.co/7nKKhzW/4-A8-F2-F1-B00000578-0-image-m-22-1522042449165.jpg"
             alt="green iguana"
           />
           <CardContent>
@@ -30,15 +32,18 @@ const Reviews = () => {
               Lizard
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            Whether you rent or own, you want the best security camera system for keeping an eye on your home while you’re gone. That used to entail signing on with a professional—and pricey—security service like ADT. But a boom in consumer-level smart-home .
             </Typography>
           </CardContent>
+          <i className="fab fa-font-awesome"></i>
+        <i className="fab fa-font-awesome"></i>
+        <i className="fab fa-font-awesome"></i>
           <CardActions>
             <Button size="small">Share</Button>
             <Button size="small">Learn More</Button>
           </CardActions>
         </Card>
+        
       </div>
 
       <div className="col-lg-6">
@@ -46,7 +51,7 @@ const Reviews = () => {
           <CardMedia
             component="img"
             height="240"
-            image="https://i.ibb.co/pzXH6VB/man-formal-suit-man-formal-suit-white-background-107682590-1.jpg"
+            image="https://i.ibb.co/LJ50W0Z/975670-961858-r3.jpg"
             alt="green iguana"
           />
           <CardContent>
@@ -54,8 +59,7 @@ const Reviews = () => {
               Lizard
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
+            These close cousins of webcams require minimal installation and offer flexible setups and a range of security features. Indeed, the offerings vary widely by camera, and deciding what to buy gets more daunting as this category grows ever more crowded.
             </Typography>
           </CardContent>
           <CardActions>
