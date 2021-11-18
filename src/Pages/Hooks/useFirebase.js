@@ -19,6 +19,8 @@ const useFirebase = ()=>{
               setAuthError('');
               const newUser = {email, displayName: name};
               setUser(newUser);
+              // save user to database
+              saveUser(email, name);
               updateProfile(auth.currentUser, {
                 displayName: name
               }).then(() => {
@@ -82,7 +84,9 @@ signOut(auth).then(() => {
 
 }
 
+const saveUser = (email, displayName)=>{
 
+}
 
         return {
             user,

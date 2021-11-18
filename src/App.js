@@ -16,6 +16,7 @@ import Explore from './Pages/Explore/Explore/Explore';
 import MyOrder from './Pages/Dashboard/MyOrder/MyOrder';
 import Payment from './Pages/Dashboard/Payment/Payment';
 import Review from './Pages/Dashboard/Review/Review';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -33,6 +34,9 @@ function App() {
           <PrivateRoute exact path="/services/:bookingId">
             <Booking />
           </PrivateRoute>
+          <Route path="/dashboard">
+            <Dashboard></Dashboard>
+          </Route>
           <Route path="/signIn">
             <LogIn></LogIn>
           </Route>

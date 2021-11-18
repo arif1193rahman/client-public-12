@@ -20,8 +20,10 @@ const Booking = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    //  data.email = email;
-    fetch(`https://polar-oasis-62677.herokuapp.com/services`, {
+    // const newData = {...data,brand:product.brand, price:product.price}
+    // console.log(newData);
+    // const product = newData;
+    fetch(`http://localhost:5000/services`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -35,6 +37,7 @@ const Booking = () => {
         }
       });
   };
+  
 
   useEffect(() => {
       fetch(`https://polar-oasis-62677.herokuapp.com/services/${bookingId}`)
@@ -71,14 +74,14 @@ const Booking = () => {
           <input
             type="text"
             className="p-2 m-2"
-             defaultValue={product.brand}
+             defaultValue={product?.brand}
             placeholder="+880"
             {...register("name")}
           />
           <input
             type="number"
             className="p-2 m-2"
-             defaultValue={product.price}
+             defaultValue={product?.price}
             {...register("price")}
           />
 
