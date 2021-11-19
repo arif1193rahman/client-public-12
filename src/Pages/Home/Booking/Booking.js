@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { useForm } from "react-hook-form";
 import "./Booking.css";
+import Header from "../Header/Header";
 
 const Booking = () => {
   const { user,} = useAuth();
@@ -44,7 +45,9 @@ const Booking = () => {
   //   console.log(product);
   // console.log(product.name);
   return (
-    <div className="row m-5">
+    <div>
+      <Header></Header>
+      <div className="row m-5">
       <div className="col-lg-6 col-sm-12">
         <h2>Confirm Your Order...</h2>
         <h1>To</h1>
@@ -100,6 +103,7 @@ const Booking = () => {
           />
         </form>
       </div>
+    </div>
     </div>
   );
 };

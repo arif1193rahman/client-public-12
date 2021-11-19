@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Header from '../../Home/Header/Header';
 import ExploreAll from '../ExploreAll/ExploreAll';
 
 const Explore = () => {
@@ -11,7 +12,9 @@ const Explore = () => {
     },[])
     // console.log(explores);
     return (
-        <div className="total-card mt-5">
+        <div>
+            <Header></Header>
+            <div className="total-card mt-5">
         <h2 className="customer-head">This is our <span>service</span></h2>
         <div className="row m-4">
                 {
@@ -23,6 +26,7 @@ const Explore = () => {
                 }
         </div>
     </div>
+        </div>
     );
 };
 
