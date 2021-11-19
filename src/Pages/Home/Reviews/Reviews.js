@@ -28,15 +28,14 @@ const Reviews = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Liza
             </Typography>
             <Typography variant="body2" color="text.secondary">
             Whether you rent or own, you want the best security camera system for keeping an eye on your home while you’re gone. That used to entail signing on with a professional—and pricey—security service like ADT. But a boom in consumer-level smart-home .
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Like</Button>
           </CardActions>
         </Card>
         
@@ -52,15 +51,14 @@ const Reviews = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Robert
             </Typography>
             <Typography variant="body2" color="text.secondary">
             These close cousins of webcams require minimal installation and offer flexible setups and a range of security features. Indeed, the offerings vary widely by camera, and deciding what to buy gets more daunting as this category grows ever more crowded.
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Share</Button>
-            <Button size="small">Learn More</Button>
+            <Button size="small">Like</Button>
           </CardActions>
         </Card>
       </div>

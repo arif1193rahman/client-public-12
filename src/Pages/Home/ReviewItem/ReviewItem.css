@@ -1,0 +1,10 @@
+.review-main{
+    margin: 40px;
+}
+
+.review-header{
+    text-align: center;
+    /* margin: 20px; */
+    color: rgb(157, 173, 7);
+    font-size: 30px;
+}

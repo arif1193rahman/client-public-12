@@ -20,9 +20,6 @@ const Booking = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    // const newData = {...data,brand:product.brand, price:product.price}
-    // console.log(newData);
-    // const product = newData;
     fetch(`https://polar-oasis-62677.herokuapp.com/services`, {
       method: "POST",
       headers: { "content-type": "application/json" },

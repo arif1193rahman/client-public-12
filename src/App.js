@@ -5,8 +5,6 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Pages/Home/Home/Home';
-import Header from './Pages/Home/Header/Header';
-import Footer from './Pages/Home/Footer/Footer';
 import Booking from './Pages/Home/Booking/Booking';
 import AuthProvider from './Pages/Context/AuthProvider/AuthProvider';
 import LogIn from './Pages/LogIn/LogIn/LogIn';
@@ -21,7 +19,7 @@ function App() {
     <div className="">
       <AuthProvider>
       <Router>
-        <Header></Header>
+        {/* <Header></Header> */}
       <Switch>
           <Route exact path="/">
             <Home />
@@ -51,7 +49,6 @@ function App() {
           </Route>
           
         </Switch>
-        <Footer></Footer>
       </Router>
       </AuthProvider>
     </div>

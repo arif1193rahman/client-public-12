@@ -5,12 +5,6 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -25,6 +19,8 @@ import {
 import Review from "../Review/Review";
 import Payment from "../Payment/Payment";
 import Home from "../../Home/Home/Home";
+import Header from "../../Home/Header/Header";
+
 
 const drawerWidth = 200;
 
@@ -51,16 +47,7 @@ function Dashboard(props) {
       <Link to={`${url}/home`}>
         <Button>Home</Button>
       </Link>
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      
     </div>
   );
 
@@ -77,6 +64,7 @@ function Dashboard(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
+        <Header></Header>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -88,7 +76,7 @@ function Dashboard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Dashboard
+            Thanks For Coming DueD 
           </Typography>
         </Toolbar>
       </AppBar>

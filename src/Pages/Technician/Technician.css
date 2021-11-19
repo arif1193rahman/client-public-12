@@ -1,0 +1,34 @@
+.technician-image img {
+  width: 100%;
+  height: auto;
+}
+.technician-one{
+    text-align: center;
+    color: rgb(231, 22, 74);
+}
+
+.technician-two {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+}
+
+.technician-two span{
+color:goldenrod;
+
+}
+
+.manager{
+    border: 1px solid green;
+    background-color: beige;
+    text-align: center;
+}
+.manager:hover{
+    background-color: rgb(154, 226, 202);
+}
+
+@media only screen and (max-width: 600px) {
+  .technician-image img {
+    margin: 5px;
+  }
+  
+}

@@ -9,10 +9,10 @@ const MyOrder = () => {
   const [totalOrders, setTotalOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`https://polar-oasis-62677.herokuapp.com/myOrders/${user.email}`)
+    fetch(`https://polar-oasis-62677.herokuapp.com/myOrders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setTotalOrders(data));
-  }, [user.email]);
+  }, [user?.email]);
   return (
     <div>
       <h1 className="order-head">Total Orders: {totalOrders.length}</h1>
