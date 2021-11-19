@@ -12,7 +12,7 @@ const OurServices = () => {
         useEffect(()=>{
             fetch('https://polar-oasis-62677.herokuapp.com/services')
             .then(res=>res.json())
-            .then(data=> setServices(data))
+            .then(data=> setServices(data.slice(0, 6)))
         },[])
     return (
         <div className="total-card mt-5">

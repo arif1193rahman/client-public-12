@@ -6,7 +6,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import './Reviews.css';
 
@@ -35,9 +34,6 @@ const Reviews = () => {
             Whether you rent or own, you want the best security camera system for keeping an eye on your home while you’re gone. That used to entail signing on with a professional—and pricey—security service like ADT. But a boom in consumer-level smart-home .
             </Typography>
           </CardContent>
-          <i className="fab fa-font-awesome"></i>
-        <i className="fab fa-font-awesome"></i>
-        <i className="fab fa-font-awesome"></i>
           <CardActions>
             <Button size="small">Share</Button>
             <Button size="small">Learn More</Button>

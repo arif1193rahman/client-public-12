@@ -13,10 +13,8 @@ import LogIn from './Pages/LogIn/LogIn/LogIn';
 import Register from './Pages/LogIn/Register/Register';
 import PrivateRoute from './Pages/LogIn/PrivateRoute/PrivateRoute';
 import Explore from './Pages/Explore/Explore/Explore';
-import MyOrder from './Pages/Dashboard/MyOrder/MyOrder';
-import Payment from './Pages/Dashboard/Payment/Payment';
-import Review from './Pages/Dashboard/Review/Review';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
+import Admin from './Pages/Admin/Admin/Admin';
 
 function App() {
   return (
@@ -43,15 +41,11 @@ function App() {
           <Route path="/explore">
             <Explore></Explore>
           </Route>
-          <Route path="/myOrder">
-          <MyOrder></MyOrder>
+          
+          <Route path="/admin">
+            <Admin></Admin>
           </Route>
-          <Route path="/pay">
-          <Payment></Payment>
-          </Route>
-          <Route path="/review">
-          <Review></Review>
-          </Route>
+          
           <Route path="/register">
           <Register></Register>
           </Route>

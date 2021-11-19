@@ -23,7 +23,7 @@ const Booking = () => {
     // const newData = {...data,brand:product.brand, price:product.price}
     // console.log(newData);
     // const product = newData;
-    fetch(`http://localhost:5000/services`, {
+    fetch(`https://polar-oasis-62677.herokuapp.com/services`, {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

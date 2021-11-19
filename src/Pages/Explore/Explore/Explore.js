@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import ExploreAll from '../ExploreAll/ExploreAll';
 
 const Explore = () => {
     const [explores, setExplore] = useState([]);
 
     useEffect(()=>{
-        fetch('/tenService.json')
+        fetch('https://polar-oasis-62677.herokuapp.com/explore')
         .then(res=>res.json())
         .then(data=> setExplore(data))
     },[])
@@ -13,12 +14,13 @@ const Explore = () => {
         <div className="total-card mt-5">
         <h2 className="customer-head">This is our <span>service</span></h2>
         <div className="row m-4">
-                {/* {
-                    explores?.map(explore=> <singleExplore>
-                        explore={explore}
-                        key={explore.id}
-                    </singleExplore>)
-                } */}
+                {
+                   explores.map(explore=> <ExploreAll
+                   explore={explore}
+                   >
+
+                   </ExploreAll>)
+                }
         </div>
     </div>
     );

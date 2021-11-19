@@ -9,10 +9,10 @@ const MyOrder = () => {
   const [totalOrders, setTotalOrders] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${user.email}`)
+    fetch(`https://polar-oasis-62677.herokuapp.com/myOrders/${user.email}`)
       .then((res) => res.json())
       .then((data) => setTotalOrders(data));
-  }, []);
+  }, [user.email]);
   return (
     <div>
       <h1 className="order-head">Total Orders: {totalOrders.length}</h1>
@@ -20,12 +20,6 @@ const MyOrder = () => {
         <div>
           <Table className="m-4" striped bordered hover variant="dark">
             <thead>
-              {/* <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Option</th>
-    </tr> */}
             </thead>
             <tbody>
               <tr>
@@ -36,17 +30,6 @@ const MyOrder = () => {
                   <Button className="btn btn-danger">Delete</Button>
                 </td>
               </tr>
-              {/* <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr> */}
-              {/* <tr>
-      <td>3</td>
-      <td colSpan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr> */}
             </tbody>
           </Table>
         </div>

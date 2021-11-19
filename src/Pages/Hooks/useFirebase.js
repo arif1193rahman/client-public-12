@@ -20,7 +20,7 @@ const useFirebase = ()=>{
               const newUser = {email, displayName: name};
               setUser(newUser);
               // save user to database
-              saveUser(email, name);
+              // saveUser(email, name);
               updateProfile(auth.currentUser, {
                 displayName: name
               }).then(() => {
@@ -84,9 +84,17 @@ signOut(auth).then(() => {
 
 }
 
-const saveUser = (email, displayName)=>{
-
-}
+// const saveUser = (email, displayName)=>{
+// const user = {email, displayName};
+// fetch('https://polar-oasis-62677.herokuapp.com/users',{
+//   method: 'POST',
+//   header:{ 
+//     'content-type': 'application/json'
+//   },
+//   body: JSON.stringify(user)
+// })
+// .then()
+// }
 
         return {
             user,

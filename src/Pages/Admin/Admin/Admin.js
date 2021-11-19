@@ -14,7 +14,6 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import MyOrder from "../MyOrder/MyOrder";
 import { Button } from "@mui/material";
 import {
   Switch,
@@ -22,9 +21,9 @@ import {
   Link,
   useRouteMatch,
 } from "react-router-dom";
-import Review from "../Review/Review";
-import Payment from "../Payment/Payment";
-import Home from "../../Home/Home/Home";
+import MakeAdmin from "../MakeAdmin/MakeAdmin";
+import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import ManageProduct from "../ManageProduct/ManageProduct";
 
 const drawerWidth = 200;
 
@@ -39,18 +38,18 @@ function Dashboard(props) {
   const drawer = (
     <div>
       <Toolbar />
-      <Link to={`${url}/myOrder`}>
-        <Button>My Order</Button>
+      <Link to={`${url}/makeAdmin`}>
+        <Button>Make Admin</Button>
       </Link>
-      <Link to={`${url}/review`}>
-        <Button>Review</Button>
+      <Link to={`${url}/manageOrder`}>
+        <Button>Manage All Orders</Button>
       </Link>
-      <Link to={`${url}/pay`}>
-        <Button>Payment</Button>
+      <Link to={`${url}/manageProduct`}>
+        <Button>Manage Product</Button>
       </Link>
-      <Link to={`${url}/home`}>
+      {/* <Link to={`${url}/home`}>
         <Button>Home</Button>
-      </Link>
+      </Link> */}
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
@@ -143,18 +142,16 @@ function Dashboard(props) {
             <Route exact path={path}>
               {/* <Review></Review> */}
             </Route>
-            <Route path={`${path}/myOrder`}>
-              <MyOrder></MyOrder>
+            <Route path={`${path}/makeAdmin`}>
+              <MakeAdmin></MakeAdmin>
             </Route>
-            <Route path={`${path}/review`}>
-              <Review></Review>
+            <Route path={`${path}/manageOrder`}>
+              <ManageAllOrders></ManageAllOrders>
             </Route>
-            <Route path={`${path}/pay`}>
-              <Payment></Payment>
+            <Route path={`${path}/manageProduct`}>
+            <ManageProduct></ManageProduct>
             </Route>
-            <Route path={`${path}/home`}>
-              <Home></Home>
-            </Route>
+            
           </Switch>
         </Typography>
       </Box>
