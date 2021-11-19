@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import { NavLink, useLocation } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import Header from "../../Home/Header/Header";
 
 const LogIn = () => {
   const [logInData, setLogInData] = useState({});
@@ -31,7 +32,9 @@ const LogIn = () => {
 //     signInWithGoogle(location, history);
 //   }
   return (
-    <Container>
+    <div>
+      <Header></Header>
+      <Container>
       <Grid container spacing={2}>
         <Grid item sx={{ mt: 8 }} xs={12} md={6}>
           <Typography variant="body1" gutterBottom>
@@ -77,15 +80,11 @@ const LogIn = () => {
             }
             {authError && <Alert severity="error">{authError}</Alert>}
           </form>
-          <p>----------------------</p>
-          {/* <Button onClick={handleGoogleSignIn} variant="contained">Google Sign In</Button> */}
 
-        </Grid>
-        <Grid item xs={12} md={6}>
-          {/* <img style={{ width: "100%" }} src={logIn} alt="" /> */}
         </Grid>
       </Grid>
     </Container>
+    </div>
   );
 };
 

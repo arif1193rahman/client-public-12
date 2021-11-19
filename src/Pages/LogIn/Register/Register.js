@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import { NavLink, useHistory } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import useAuth from "../../Hooks/useAuth";
+import Header from "../../Home/Header/Header";
 
 const Register = () => {
   const [logInData, setLogInData] = useState({});
@@ -29,7 +30,9 @@ const Register = () => {
     e.preventDefault();
   };
   return (
-    <Container>
+    <div>
+      <Header></Header>
+      <Container>
       <Grid container spacing={2}>
         <Grid item sx={{ mt: 8 }} xs={12} md={6}>
           <Typography variant="body1" gutterBottom>
@@ -100,6 +103,7 @@ const Register = () => {
         </Grid>
       </Grid>
     </Container>
+    </div>
   );
 };
 
