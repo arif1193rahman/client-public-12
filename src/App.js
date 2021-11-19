@@ -19,7 +19,6 @@ function App() {
     <div className="">
       <AuthProvider>
       <Router>
-        {/* <Header></Header> */}
       <Switch>
           <Route exact path="/">
             <Home />

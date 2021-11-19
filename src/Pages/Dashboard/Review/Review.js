@@ -8,7 +8,7 @@ const Review = () => {
 
 const onSubmit = data => {
     console.log(data)
-axios.post('http://localhost:5000/reviewPart', data)
+axios.post('https://polar-oasis-62677.herokuapp.com/reviewPart', data)
 .then(res=>{
     if(res.data.insertedId){
         alert('Thanks for your opinion');

@@ -44,9 +44,6 @@ function Dashboard(props) {
       <Link to={`${url}/pay`}>
         <Button>Payment</Button>
       </Link>
-      <Link to={`${url}/home`}>
-        <Button>Home</Button>
-      </Link>
       
     </div>
   );

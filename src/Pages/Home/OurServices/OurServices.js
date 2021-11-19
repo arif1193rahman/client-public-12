@@ -2,9 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Services from '../Services/Services';
 import './OurServices.css';
 
-
-
-
 const OurServices = () => {
     const [services, setServices] = useState([])
    

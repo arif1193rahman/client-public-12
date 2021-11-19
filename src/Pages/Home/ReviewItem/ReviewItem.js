@@ -6,7 +6,7 @@ const ReviewItem = () => {
   const [reviewItems, setReviewItem] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviewPart")
+    fetch("https://polar-oasis-62677.herokuapp.com/reviewPart")
       .then((res) => res.json())
       .then((data) => setReviewItem(data));
   }, []);

@@ -10,8 +10,6 @@ const Booking = () => {
   console.log(user, 'user information');
   const { bookingId } = useParams();
   const [product, setProduct] = useState([]);
-// const email = sessionStorage.getItem('email')
-  // console.log(bookingId);
 
   const {
     register,
@@ -42,8 +40,6 @@ const Booking = () => {
       .then(res=>res.json())
       .then(data=>setProduct(data))
     },[bookingId]);
-  //   console.log(product);
-  // console.log(product.name);
   return (
     <div>
       <Header></Header>

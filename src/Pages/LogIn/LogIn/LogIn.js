@@ -28,9 +28,6 @@ const LogIn = () => {
     e.preventDefault();
   };
 
-//   const handleGoogleSignIn=(location, history)=>{
-//     signInWithGoogle(location, history);
-//   }
   return (
     <div>
       <Header></Header>

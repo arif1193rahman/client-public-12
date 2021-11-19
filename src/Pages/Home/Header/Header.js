@@ -29,21 +29,7 @@ const Header = () => {
             Explore
           </Nav.Link>
 
-          {/* {user?.email && (
-              <Nav.Link as={HashLink} to="/pay">
-               Payment 
-              </Nav.Link>
-            )}
-            {user?.email && (
-              <Nav.Link as={HashLink} to="/myOrder">
-                My Order
-              </Nav.Link>
-            )}
-            {user?.email && (
-              <Nav.Link as={HashLink} to="/review">
-                Review
-              </Nav.Link>
-            )} */}
+         
           <Navbar.Collapse className="justify-content-end">
             {user?.email ? (
               <Box>
